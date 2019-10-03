@@ -1,0 +1,163 @@
+\documentclass[a4paper,12pt,twoside]{article}%twoside
+\usepackage[utf8]{inputenc}
+\usepackage[dutch]{babel}
+\usepackage{fancyhdr, amsmath, color, graphicx, enumitem, tabularx, hyperref, longtable, multirow, placeins, apacite, subcaption,marvosym,multicol}
+\usepackage[framemethod=tikz]{mdframed}
+ 
+  \usepackage[margin=2.5cm,headheight=68pt]{geometry}
+ %\usepackage[total={16cm, 22cm}]{geometry}
+ 
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{Specifieke Lerarenopleiding voor CVO-studenten}%'E': even page, 'O': odd page
+\fancyhead[RE,LO]{Didactische Competentie Stage}
+\fancyfoot[RE,CO]{}
+\fancyfoot[LE,RO]{KU Leuven campus Kortrijk Kulak   \thepage}
+%\renewcommand{\labelitemi}{$\circ$}
+ 
+\definecolor{CVO}{RGB}{232, 0, 97}
+\setlength\parindent{0pt}
+\title{Stageportfolio}
+\author{Kevin Truyaert}
+\date{}
+ 
+ 
+ % %FOOTER IN MDFRAMED
+ \usepackage{footnote} 
+ \newenvironment{mdframedwithfoot}
+ {   
+     \savenotes
+     \begin{mdframed}
+     \stepcounter{footnote}
+     \renewcommand{\thefootnote}{\arabic{footnote}}
+     }
+ {
+     \end{mdframed}
+     \spewnotes
+ }
+ 
+ 
+ %FOOTER IN PARBOX
+ \makeatletter
+ \newcommand{\global@insert}[2]% #1=box number, #2=vertical list
+ {\bgroup
+   \setbox\@tempboxa=\box#1
+   \global\setbox#1=\vbox{\unvbox\@tempboxa #2}
+ \egroup}
+ 
+ \long\def\@footnotetext#1{\global@insert\footins{%
+  \reset@font\footnotesize
+  \interlinepenalty\interfootnotelinepenalty
+  \splittopskip\footnotesep
+  \splitmaxdepth \dp\strutbox \floatingpenalty \@MM
+  \hsize\columnwidth \@parboxrestore
+  \protected@edef\@currentlabel{%
+  \csname p@footnote\endcsname\@thefnmark
+  }%
+  \color@begingroup
+  \@makefntext{%
+  \rule\z@\footnotesep\ignorespaces#1\@finalstrut\strutbox}%
+  \color@endgroup}}%
+ \makeatother
+ %%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+ %Strikeout and highlight text
+  \usepackage{soul}
+  \usepackage{tikz} % only to get \foreach
+  
+  %\definecolor{yellow}{RGB}{255,255,0}
+  \sethlcolor{yellow}
+
+  \newcommand*{\YellowHighlight}[1]{{\hl{~#1~}}}
+  % % % % % %
+  
+  \usepackage{tabularx,pdflscape,pdfpages}
+  
+  \newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+ 
+ \begin{document}
+\maketitle
+
+
+\section*{Identificatiegegevens}
+\begin{center}
+	\begin{tabular}{ll}
+	\hline
+	Naam: & Kevin Truyaert\\ \hline
+	Adres: & Bolle-Akkerweg 4\\
+		& 8800 Roeselare\\\hline
+	Telefoon: & 0032495/928460\\\hline
+	Mail: & kevin.truyaert@student.kuleuven.be\\\hline
+	Naam stagebegeleider: & Annelies Declerck\\ \hline
+\end{tabular}
+\end{center}
+
+\newpage
+\tableofcontents
+\newpage
+
+\section{Observatie- en stageplanning}
+
+
+\section{Persoonlijk ontwikkelingsplan}
+
+\begin{tabular}{|p{0.15\textwidth}|p{0.7\textwidth}|}
+	\hline
+	\textbf{Lesdoel 1} & 
+	\underline{FG 1: de leraar als begeleider van leer-en}\newline \underline{ontwikkelingsprocessen}\newline
+	
+	1.8 De leraar kan observatie en evaluatie voorbereiden en uitvoeren met het oog op bijsturing en remediëring als onderdeel van het leerproces van een lerende(n) en kan die observatie-en evaluatiegegevens gebruiken om zijn eigen didactische handelen in vraag te stellen en bij te sturen waar nodig.\\ \hline
+	Actie 1 & Tijdens het lesgeven wil ik veel in interactie treden. Dit zou ik met zoveel mogelijk leerlingen willen doen en niet steeds dezelfde leerlingen aan bod laten komen. Door hen gerichte vragen te stellen, kan ik kijken waar er mogelijke problemen zijn met de leerstof en van daaruit werken om zoveel mogelijk begrijpelijk te maken voor alle leerlingen. \\ \hline
+	Actie 2 & Na het verbeteren van een toets, wil ik die met de leerlingen overlopen door de meest voorkomende fouten te bespreken. Zo kan ik hen bijsturen en kan ik de belangrijkste punten aanhalen waar er problemen waren. Tegelijkertijd kom ik zo te weten waar ik te weinig nadruk gelegd heb tijdens de les. Hier kan ik nu mee aan de slag om mijn toekomstige lessen aan te passen en om te verhinderen dat hetzelfde soort fouten bij soortgelijke zaken minder gemaakt worden. \\ \hline
+\end{tabular}
+
+\vspace{0.5cm}
+\begin{tabular}{|p{0.15\textwidth}|p{0.7\textwidth}|}
+\hline
+\textbf{Lesdoel 2} & \underline{FG5:  de leraar als innovator - de leraar als onderzoeker}\newline
+5.1 De leraar kan de kwaliteit van zijn onderwijs verder ontwikkelen. De leraar kan zijn eigen onderwijspraktijk en zijn eigen functioneren in vraag stellen en bijsturen (verbeteren) door te innoveren om zijn eigen praktijk te verbeteren.\\ \hline
+Actie 1 & \\ \hline
+Actie 2 & \\ \hline
+\end{tabular}
+
+\vspace{0.5cm}
+\begin{tabular}{|p{0.15\textwidth}|p{0.7\textwidth}|}
+\hline
+\textbf{Lesdoel 3} & \\ \hline
+Actie 1 & \\ \hline
+Actie 2 & \\ \hline
+\end{tabular}
+
+
+\section{Bespreking lesobservaties}
+
+\section{Lesvoorbereidingen en bijhorende media}
+
+\section{Bespreking meso-activiteiten}
+
+\section{Evaluatiedocumenten vakmentor}
+
+\section{Evaluatie document klasbezoek stagebegeleider}
+
+\section{Eindreflectie}
+
+\section{Voorbereiding eindassessment}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ \end{document}
