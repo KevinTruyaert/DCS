@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6730) (preloaded format=pdflatex 2018.9.1)  3 OCT 2019 21:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6730) (preloaded format=pdflatex 2018.9.1)  9 OCT 2019 19:03
 entering extended mode
 **./Stageportfolio.tex
 (Stageportfolio.tex
@@ -1205,22 +1205,40 @@ Package babel Info: Redefining dutch shorthand "|
 Package babel Info: Redefining dutch shorthand "~
 (babel)             in language  on input line 99.
 Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 100.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 100.
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 100.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 100.
+ [3]
+\openout2 = `Planning.aux'.
+
+
+No file Planning.tex.
+Package babel Info: Redefining dutch shorthand "|
 (babel)             in language  on input line 102.
 Package babel Info: Redefining dutch shorthand "~
 (babel)             in language  on input line 102.
 
-Underfull \hbox (badness 10000) in paragraph at lines 107--108
+Underfull \hbox (badness 10000) in paragraph at lines 112--112
 
  []
 
 
-Underfull \hbox (badness 1442) in paragraph at lines 109--109
-\OT1/cmr/m/n/12 uitvoeren met het oog op bijsturing en remedi[]ering als
+Overfull \hbox (0.15793pt too wide) in alignment at lines 112--112
+[][] 
  []
 
 
-Underfull \hbox (badness 1270) in paragraph at lines 109--109
-\OT1/cmr/m/n/12 onderdeel van het leerproces van een lerende(n) en kan
+Overfull \hbox (0.15793pt too wide) in alignment at lines 121--121
+[][] 
+ []
+
+
+Overfull \hbox (0.15793pt too wide) in alignment at lines 129--129
+[][] 
  []
 
 Package babel Info: Redefining dutch shorthand "|
@@ -1262,7 +1280,10 @@ Package babel Info: Redefining dutch shorthand "|
 (babel)             in language  on input line 163.
 Package babel Info: Redefining dutch shorthand "~
 (babel)             in language  on input line 163.
- [3]
+ [4
+
+
+]
 Package babel Info: Redefining dutch shorthand "|
 (babel)             in language  on input line 163.
 Package babel Info: Redefining dutch shorthand "~
@@ -1272,10 +1293,10 @@ Package babel Info: Redefining dutch shorthand "|
 Package babel Info: Redefining dutch shorthand "~
 (babel)             in language  on input line 163.
 
-[4]
+[5]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 163.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 163.
- (Stageportfolio.aux)
+ (Stageportfolio.aux (Planning.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 163.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 163.
 Package rerunfilecheck Info: File `Stageportfolio.out' has not changed.
@@ -1283,19 +1304,19 @@ Package rerunfilecheck Info: File `Stageportfolio.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 163.
  ) 
 Here is how much of TeX's memory you used:
- 30052 strings out of 494891
- 558218 string characters out of 3178674
- 640774 words of memory out of 3000000
- 33269 multiletter control sequences out of 15000+200000
+ 30057 strings out of 494891
+ 558262 string characters out of 3178674
+ 642774 words of memory out of 3000000
+ 33270 multiletter control sequences out of 15000+200000
  538637 words of font info for 46 fonts, out of 3000000 for 9000
  0 hyphenation exceptions out of 8191
  67i,11n,65p,935b,350s stack positions out of 5000i,500n,10000p,200000b,50000s
 </home/kevin/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></home/kevin/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr12.pfb><
 /home/kevin/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on Stageportfolio.pdf (4 pages, 56284 bytes).
+Output written on Stageportfolio.pdf (5 pages, 58415 bytes).
 PDF statistics:
- 89 PDF objects out of 1000 (max. 8388607)
- 16 named destinations out of 1000 (max. 500000)
+ 93 PDF objects out of 1000 (max. 8388607)
+ 17 named destinations out of 1000 (max. 500000)
  85 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,10 +1,10 @@
 \babel@toc {dutch}{}
 \contentsline {section}{\numberline {1}Observatie- en stageplanning}{3}{section.1}
-\contentsline {section}{\numberline {2}Persoonlijk ontwikkelingsplan}{3}{section.2}
-\contentsline {section}{\numberline {3}Bespreking lesobservaties}{4}{section.3}
-\contentsline {section}{\numberline {4}Lesvoorbereidingen en bijhorende media}{4}{section.4}
-\contentsline {section}{\numberline {5}Bespreking meso-activiteiten}{4}{section.5}
-\contentsline {section}{\numberline {6}Evaluatiedocumenten vakmentor}{4}{section.6}
-\contentsline {section}{\numberline {7}Evaluatie document klasbezoek stagebegeleider}{4}{section.7}
-\contentsline {section}{\numberline {8}Eindreflectie}{4}{section.8}
-\contentsline {section}{\numberline {9}Voorbereiding eindassessment}{4}{section.9}
+\contentsline {section}{\numberline {2}Persoonlijk ontwikkelingsplan}{4}{section.2}
+\contentsline {section}{\numberline {3}Bespreking lesobservaties}{5}{section.3}
+\contentsline {section}{\numberline {4}Lesvoorbereidingen en bijhorende media}{5}{section.4}
+\contentsline {section}{\numberline {5}Bespreking meso-activiteiten}{5}{section.5}
+\contentsline {section}{\numberline {6}Evaluatiedocumenten vakmentor}{5}{section.6}
+\contentsline {section}{\numberline {7}Evaluatie document klasbezoek stagebegeleider}{5}{section.7}
+\contentsline {section}{\numberline {8}Eindreflectie}{5}{section.8}
+\contentsline {section}{\numberline {9}Voorbereiding eindassessment}{5}{section.9}
