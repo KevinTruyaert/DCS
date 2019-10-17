@@ -1,0 +1,89 @@
+\documentclass[a4paper,12pt,twoside]{article}%twoside
+\usepackage[utf8]{inputenc}
+\usepackage[dutch]{babel}
+\usepackage{fancyhdr, amsmath, color, graphicx, enumitem, tabularx, hyperref, longtable, multirow, placeins, apacite, subcaption,marvosym,multicol}
+\usepackage[framemethod=tikz]{mdframed}
+ 
+  \usepackage[margin=2.5cm,headheight=68pt]{geometry}
+ %\usepackage[total={16cm, 22cm}]{geometry}
+ 
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{Specifieke Lerarenopleiding voor CVO-studenten}%'E': even page, 'O': odd page
+\fancyhead[RE,LO]{Didactische Competentie Stage}
+\fancyfoot[RE,CO]{}
+\fancyfoot[LE,RO]{KU Leuven campus Kortrijk Kulak   \thepage}
+%\renewcommand{\labelitemi}{$\circ$}
+ 
+\definecolor{CVO}{RGB}{232, 0, 97}
+\setlength\parindent{0pt}
+\title{Stageportfolio}
+\author{Kevin Truyaert}
+\date{}
+ 
+ 
+ % %FOOTER IN MDFRAMED
+ \usepackage{footnote} 
+ \newenvironment{mdframedwithfoot}
+ {   
+     \savenotes
+     \begin{mdframed}
+     \stepcounter{footnote}
+     \renewcommand{\thefootnote}{\arabic{footnote}}
+     }
+ {
+     \end{mdframed}
+     \spewnotes
+ }
+ 
+ 
+ %FOOTER IN PARBOX
+ \makeatletter
+ \newcommand{\global@insert}[2]% #1=box number, #2=vertical list
+ {\bgroup
+   \setbox\@tempboxa=\box#1
+   \global\setbox#1=\vbox{\unvbox\@tempboxa #2}
+ \egroup}
+ 
+ \long\def\@footnotetext#1{\global@insert\footins{%
+  \reset@font\footnotesize
+  \interlinepenalty\interfootnotelinepenalty
+  \splittopskip\footnotesep
+  \splitmaxdepth \dp\strutbox \floatingpenalty \@MM
+  \hsize\columnwidth \@parboxrestore
+  \protected@edef\@currentlabel{%
+  \csname p@footnote\endcsname\@thefnmark
+  }%
+  \color@begingroup
+  \@makefntext{%
+  \rule\z@\footnotesep\ignorespaces#1\@finalstrut\strutbox}%
+  \color@endgroup}}%
+ \makeatother
+ %%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+ %Strikeout and highlight text
+  \usepackage{soul}
+  \usepackage{tikz} % only to get \foreach
+  
+  %\definecolor{yellow}{RGB}{255,255,0}
+  \sethlcolor{yellow}
+
+  \newcommand*{\YellowHighlight}[1]{{\hl{~#1~}}}
+  % % % % % %
+  
+  \usepackage{tabularx,pdflscape,pdfpages}
+  
+  \newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+ 
+ \begin{document}
+
+
+
+
+\include{Planning}
+
+
+
+
+
+ \end{document}
