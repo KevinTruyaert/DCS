@@ -68,7 +68,10 @@
   %\definecolor{yellow}{RGB}{255,255,0}
   \sethlcolor{yellow}
 
-  \newcommand*{\YellowHighlight}[1]{{\hl{~#1~}}}
+ % \newcommand*{\YellowHighlight}[1]{{\hl{~#1~}}}
+  \newcommand*{\PinkHighlight}[2]{{\hspace{-1.5mm}\colorbox{pink}{\parbox{#2}{~#1~}}}}
+  \newcommand*{\GreenHighlight}[2]{{\hspace{-1.5mm}\colorbox{green}{\parbox{#2}{~#1~}}}}
+  \newcommand*{\YellowHighlight}[2]{{\hspace{-1.5mm}\colorbox{yellow}{\parbox{#2}{~#1~}}}}
   % % % % % %
   
   \usepackage{tabularx,pdflscape,pdfpages}
