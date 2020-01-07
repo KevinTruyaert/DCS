@@ -5,10 +5,10 @@
 \usepackage[framemethod=tikz]{mdframed}
 
 \usepackage[europeanresistors,americaninductors,americancurrents,siunitx]{circuitikz}
- 
-  \usepackage[margin=2.5cm,headheight=68pt]{geometry}
- %\usepackage[total={16cm, 22cm}]{geometry}
- 
+
+\usepackage[margin=2.5cm,headheight=68pt]{geometry}
+%\usepackage[total={16cm, 22cm}]{geometry}
+
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[LE,RO]{Specifieke Lerarenopleiding voor CVO-studenten}%'E': even page, 'O': odd page
@@ -16,208 +16,223 @@
 \fancyfoot[RE,CO]{}
 \fancyfoot[LE,RO]{KU Leuven campus Kortrijk Kulak   \thepage}
 %\renewcommand{\labelitemi}{$\circ$}
- 
+
 \definecolor{CVO}{RGB}{232, 0, 97}
 \setlength\parindent{0pt}
 \title{Stageportfolio}
 \author{Kevin Truyaert}
 \date{}
- 
- 
- % %FOOTER IN MDFRAMED
- \usepackage{footnote} 
- \newenvironment{mdframedwithfoot}
- {   
-     \savenotes
-     \begin{mdframed}
-     \stepcounter{footnote}
-     \renewcommand{\thefootnote}{\arabic{footnote}}
-     }
- {
-     \end{mdframed}
-     \spewnotes
- }
- 
- 
- %FOOTER IN PARBOX
- \makeatletter
- \newcommand{\global@insert}[2]% #1=box number, #2=vertical list
- {\bgroup
-   \setbox\@tempboxa=\box#1
-   \global\setbox#1=\vbox{\unvbox\@tempboxa #2}
- \egroup}
- 
- \long\def\@footnotetext#1{\global@insert\footins{%
-  \reset@font\footnotesize
-  \interlinepenalty\interfootnotelinepenalty
-  \splittopskip\footnotesep
-  \splitmaxdepth \dp\strutbox \floatingpenalty \@MM
-  \hsize\columnwidth \@parboxrestore
-  \protected@edef\@currentlabel{%
-  \csname p@footnote\endcsname\@thefnmark
-  }%
-  \color@begingroup
-  \@makefntext{%
-  \rule\z@\footnotesep\ignorespaces#1\@finalstrut\strutbox}%
-  \color@endgroup}}%
- \makeatother
- %%%%%%%%%%%%%%%%%%%%%%%%%
- 
- %Strikeout and highlight text
-  \usepackage{soul}
-  \usepackage{tikz} % only to get \foreach
-  
-  %\definecolor{yellow}{RGB}{255,255,0}
-  \sethlcolor{yellow}
-
- % \newcommand*{\YellowHighlight}[1]{{\hl{~#1~}}}
-  \newcommand*{\PinkHighlight}[2]{{\hspace{-1.5mm}\colorbox{pink}{\parbox{#2}{~#1~}}}}
-  \newcommand*{\GreenHighlight}[2]{{\hspace{-1.5mm}\colorbox{green}{\parbox{#2}{~#1~}}}}
-  \newcommand*{\YellowHighlight}[2]{{\hspace{-1.5mm}\colorbox{yellow}{\parbox{#2}{~#1~}}}}
-  % % % % % %
-  
-  \usepackage{tabularx,pdflscape,pdfpages}
-  
-  \newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
- 
- \begin{document}
-\maketitle
 
 
-\section*{Identificatiegegevens}
-\begin{center}
-	\begin{tabular}{ll}
-	\hline
-	Naam: & Kevin Truyaert\\ \hline
-	Adres: & Bolle-Akkerweg 4\\
-		& 8800 Roeselare\\\hline
-	Telefoon: & 0032495/928460\\\hline
-	Mail: & kevin.truyaert@student.kuleuven.be\\\hline
-	Naam stagebegeleider: & Cato De Baets\\ \hline
-\end{tabular}
-\end{center}
-
-\newpage
-\tableofcontents
-\newpage
+% %FOOTER IN MDFRAMED
+\usepackage{footnote} 
+\newenvironment{mdframedwithfoot}
+{   
+	\savenotes
+	\begin{mdframed}
+		\stepcounter{footnote}
+		\renewcommand{\thefootnote}{\arabic{footnote}}
+	}
+	{
+	\end{mdframed}
+	\spewnotes
+}
 
 
-\include{Planning}
+%FOOTER IN PARBOX
+\makeatletter
+\newcommand{\global@insert}[2]% #1=box number, #2=vertical list
+{\bgroup
+	\setbox\@tempboxa=\box#1
+	\global\setbox#1=\vbox{\unvbox\@tempboxa #2}
+	\egroup}
 
+\long\def\@footnotetext#1{\global@insert\footins{%
+		\reset@font\footnotesize
+		\interlinepenalty\interfootnotelinepenalty
+		\splittopskip\footnotesep
+		\splitmaxdepth \dp\strutbox \floatingpenalty \@MM
+		\hsize\columnwidth \@parboxrestore
+		\protected@edef\@currentlabel{%
+			\csname p@footnote\endcsname\@thefnmark
+		}%
+		\color@begingroup
+		\@makefntext{%
+			\rule\z@\footnotesep\ignorespaces#1\@finalstrut\strutbox}%
+		\color@endgroup}}%
+\makeatother
+%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%Strikeout and highlight text
+\usepackage{soul}
+\usepackage{tikz} % only to get \foreach
 
-\include{POP}
+%\definecolor{yellow}{RGB}{255,255,0}
+\sethlcolor{yellow}
 
+% \newcommand*{\YellowHighlight}[1]{{\hl{~#1~}}}
+\newcommand*{\PinkHighlight}[2]{{\hspace{-1.5mm}\colorbox{pink}{\parbox{#2}{~#1~}}}}
+\newcommand*{\GreenHighlight}[2]{{\hspace{-1.5mm}\colorbox{green}{\parbox{#2}{~#1~}}}}
+\newcommand*{\YellowHighlight}[2]{{\hspace{-1.5mm}\colorbox{yellow}{\parbox{#2}{~#1~}}}}
+% % % % % %
 
-\begin{landscape}
+\usepackage{tabularx,pdflscape,pdfpages}
+
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{Q}[1]{>{\flushleft\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+
+\begin{document}
+	\maketitle
 	
-\section{Bespreking lesobservaties}
-
-\begin{tabularx}{1.56\textwidth}{|C{0.25\textwidth}|C{0.1\textwidth}|C{0.25\textwidth}|X|}\hline
-	\textbf{Naam student: Kevin Truyaert} & & Aandachtspunten (o.b.v. POP) & Reflectie:\newline -Wat leerde ik uit mijn observatie over mijn aandachtspunten? \newline -Wat doe ik ermee tijdens mijn stage?\\\hline
-	Observatieles 1 \newline \underline{Datum:} & 1 & & \\
-	\underline{Klas:} 2e bachelor Handelsingenieurs \newline \underline{Lesonderwerp:} & 2 & & \\\hline
-	Observatieles 2 \newline \underline{Datum:} & 1 & & \\
-	\underline{Klas:} 2e bachelor Handelsingenieurs \newline \underline{Lesonderwerp:} & 2 & & \\\hline
 	
-\end{tabularx}
-\end{landscape}
-
-\include{LesvoorbereidingLes1}
-\include{LesvoorbereidingLes2}
-\include{LesvoorbereidingLes3}
-\include{LesvoorbereidingLes4}
-
-
-
-
-
-
-
-\section{Bespreking meso-activiteiten}
-Stel per meso-activiteit een verslag op op basis van volgende criteria:
-\begin{itemize}
-	\item Korte situering van de drie activiteiten.
- 	\item Omschrijving van twee aspecten die je voor jezelf geleerd hebt uit de deelname aan de activiteiten
-	\item  Toon aan met twee voorbeelden dat de activiteiten een meerwaarde zijn voor de leerkrachten.
-	\item Toon aan met twee voorbeelden dat de activiteiten een meerwaarde vormen voor de leerlingen.
-	\item Bespreek hoe het komt dat bepaalde activiteiten geen echte meerwaarde hebben voor leerlingen en op welke manier deze aangepast kunnen worden om toch nog functioneel te zijn voor het leerproces van de leerlingen.
-\end{itemize}
-
-\subsection{Omschrijving van de activiteiten}
-\subsubsection{Meso-activiteit 1: kinderuniversiteit Kulak}  Op zaterdag 26 oktober ging aan de katholieke universiteit campus kulak kortrijk de kinderuniversiteit door. Tijdens deze dag kunnen jongeren tussen 8 en 13 jaar ofwel de voormiddag, namiddag of hele dag op de universiteit doorbrengen. Per sessie wordt er zowel een lezing (45min) als een workshop (1u30min) aangereikt; de lezing wordt door iedereen gevolgd, waarna de jongeren zich verspreiden om per 20 à 25 een workshop te volgen.\newline
-
-
-De 15e editie van de kinderuniversiteit stond in het teken van `reis door de tijd'. De werknemers van de Kulak voorzagen tien verschillende workshops. Enkele personen binnen de fysica, waartoe ik behoor, bedachten een workshop genaamd `Bouw nu een telescoop en kijk straks naar het Universum van vroeger!'. Hiermee willen we de leerlingen bekend maken met de werking van lenzen, dat je de kleuren van de regenboog uit wit licht kan halen en dat je in het verleden kijkt wanneer je met een telescoop naar de sterren kijkt. De leerlingen krijgen tijdens de workshop eerst een halfuur uitleg van de professor door middel van een presentatie met slides en demonstratiemateriaal. Tijdens deze presentatie begint de professor met uit te leggen hoe licht werkt. Hij toont breking van licht met behulp van een laserstraal, een glazen halve cirkel (om het licht te breken) en wat krijtstof. Om reflectie duidelijk te maken, wordt er een spiegel aan de leerlingen doorgegeven. Daarna legt de prof uit hoe zowel holle als bolle lenzen werken, hoe ze ervoor zorgen dat dingen vergroot en verkleind worden en hoe je lenzen kan gebruiken om naar de ruimte te kijken. Daarna legt de professor nog uit dat het licht wel heel snel gaat, maar niet oneindig snel. Hierdoor zie je sterren zoals ze in het verleden waren. \newline\newline
-
-Na deze uitleg gaan de leerlingen aan de slag met het maken van een minitelescoop. Hiervoor gebruiken ze:
-\begin{itemize}
-	\item 2 PVC-buizen met een verschillende diameter die in elkaar schuiven
-	\item Twee verschillende lenzen
-	\item 3D-geprinte lenshouders
-	\item Plakband en versiering.
-\end{itemize}
-\begin{figure}[!h]
-	\centering
-	\includegraphics[width=0.9\textwidth]{Telescoop}
-	\caption{Het materiaal waarmee de telescoop gemaakt wordt.}
-	\label{Fig::Telescoop}
-\end{figure}
-Tijdens het maken van hun telescoop werden de leerlingen per drie meegenomen om zelf de eigenschappen van lenzen te ondervinden. Er werd een figuur op doorschijnende folie afgedrukt die een hond voorstelt en wanneer je de figuur ondersteboven houdt een kat toont. De figuur staat hieronder in beide opzichten.
-
-\begin{figure}[!b]
-	\centering
-	\includegraphics[width=0.5\textwidth]{HondKat}
-	\caption{De figuur die gebruikt werd om de  leerlingen de eigenschappen van bolle lenzen te laten ondervinden.}
-	\label{Fig::HondKat}
-\end{figure}
-Door middel van een opstelling met bolle lenzen is het mogelijk om beide figuren zichtbaar te maken, aangezien bolle lenzen het beeld kunnen omdraaien. De opstelling werd aan de leerlingen voorgesteld en iedere component werd benoemd. Door aan de  leerlingen de vraag te stellen hoe het mogelijk is dat beide beelden uit het ene beeld voortkomen wisten er sommigen de eigenschappen van bolle lenzen, die ze net gehoord hadden, te gebruiken om dit te verklaren. 
-
-Wanneer alle jongeren hun telescoop gemaakt hebben, kunnen ze op zoek gaan naar hun naam die op een ster geschreven staat. Die sterren hangen een eindje verder, waardoor hun namen niet zichtbaar zijn met het blote oog, maar wel met de gemaakte telescoop. 
-
-\subsection{Twee aspecten die ik voor mezelf geleerd heb}
-
-\subsection{Twee voorbeelden die aantonen dat de activiteiten een meerwaarde zijn voor leerkrachten}
-\begin{itemize}[labelwidth=3em,leftmargin =\dimexpr\labelwidth+\labelsep\relax]
-	\item[Meso 1] Ondanks dat de werking van lenzen geen makkelijke materie is, was ik verbaasd van de interpretatie van sommige jongeren bij de proef met de hond-kat. In eerste instantie vonden ze het heel vreemd wat er aan de hand was: ze zagen twee verschillende beelden, maar die kwamen allebei van dezelfde foto. Door als leerkracht hier gerichte vragen te stellen, kun je de leerlingen zelfontdekkend laten leren. Het zijn zijzelf die de link leggen tussen de eigenschappen van lenzen: bolle lenzen draaien je beeld om en maken het reëel, terwijl holle lenzen de oriëntatie van het beeld behouden, maar dat het beeld virtueel wordt. Hierdoor wordt mijn beeld van zelfontdekkend leren  binnen het juiste tijdskader versterkt.
-\end{itemize}
-
-\subsection{Twee voorbeelden die aantonen dat de activiteiten een meerwaarde zijn voor leerlingen}
-
-
-\subsection{Voorbeelden die geen echte meerwaarde hebben voor de  leerlingen en op welke manier deze aangepast kunnen worden om toch nog functioneel te zijn voor het leerproces van de leerlingen}
-
-
-
-
-
-
-\section{Evaluatiedocumenten vakmentor}
-
-\section{Evaluatiedocument klasbezoek stagebegeleider}
-
-\section{Eindreflectie}
-Stel een eindreflectie op waarin je volgende aspecten behandelt: 
-
-1) Waren er factoren die bevorderend of belemmerend werkten m.b.t. het goed doorlopen van je stage? 
-2) Waarvoor had je graag bijkomende begeleiding gekregen van je vakmentoren? 
-3) Waarvoor had je graag bijkomende begeleiding gekregen van je stagebegeleider? 
-4) Bekijk aandachtig de acties die je in het begin van je stage opstelde in jouw POP . Ga na of je via de acties jouw leerdoelen hebt behaald. Verwijs heel duidelijk naar informatie in je portfolio waar en hoe je deze acties aan bod liet komen. 
-5)  Bestudeer nogmaals het opleidingsprofiel en de basiscompetenties van een leraar (link):  bespreek minstens 5 basiscompetenties die je succesvol hebt behaald tijdens het uitvoeren van je stage. 
-Jouw eindreflectie is maximaal drie A4-pagina’s lang. 
-
-
-
-\section{Voorbereiding eindassessment}
-
-Om het eindassessment voor te bereiden, kan je gebruik maken van volgende vragen:
-• Lees jouw eindreflectie goed na en bekijk jouw leerdoelen en uitgewerkte acties. Recapituleer hoe je de stage hebt ervaren. Waarom moet een directeur jou als leerkracht aanwerven? Wat heb jij een schoolteam te bieden? Waar zie je nog uitdagingen voor jezelf? 
-• Waar heb je nog aanvangsbegeleiding nodig en wie kan jou daarbij helpen (toon je inzicht in vakgroep- en schoolwerking aan)?
-• Hoe heb je de lerarenopleiding in het algemeen ervaren? Wat vond je positief? Wat heb je gemist tijdens de opleiding? 
-
-
-
-
-
-
- \end{document}
+	\section*{Identificatiegegevens}
+	\begin{center}
+		\begin{tabular}{ll}
+			\hline
+			Naam: & Kevin Truyaert\\ \hline
+			Adres: & Bolle-Akkerweg 4\\
+			& 8800 Roeselare\\\hline
+			Telefoon: & 0032495/928460\\\hline
+			Mail: & kevin.truyaert@student.kuleuven.be\\\hline
+			Naam stagebegeleider: & Cato De Baets\\ \hline
+		\end{tabular}
+	\end{center}
+	
+	\newpage
+	\tableofcontents
+	\newpage
+	
+	
+	\include{Planning}
+	
+	
+	
+	\include{POP}
+	
+	
+	\begin{landscape}
+		
+		\section{Bespreking lesobservaties}
+		
+		\subsection{Observaties Kulak}
+		
+		\begin{tabularx}{1.56\textwidth}{|Q{0.25\textwidth}|Q{0.1\textwidth}|Q{0.25\textwidth}|Q{0.85\textwidth}|}\hline
+			\textbf{Naam student: Kevin Truyaert} & & Aandachtspunten (o.b.v. POP) & Reflectie:\newline -Wat leerde ik uit mijn observatie over mijn aandachtspunten? \newline -Wat doe ik ermee tijdens mijn stage?\\\hline
+			Observatieles 1 \newline \underline{Datum:} 14/11/2019 \underline{Klas:} 2e bachelor Handelsingenieurs \newline \underline{Lesonderwerp:} De wet van Gauss bij geleiders & 1 & Hoe evalueert de prof tijdens de les om te zien of bepaalde lesdoelen tijdens de les bereikt zijn? & Na het zien van een stuk theorie, overloopt de prof samen met de studenten een toepassing op het net geziene stuk theorie. De toepassing wordt door de studenten uitgelegd. De prof stuurt hen door gericht vragen te stellen.  Daarnaast worden de studenten ook bij het zien van de afleiding van nieuwe theorie vaak betrokken. Ze hebben vaak de net geziene onderwerpen nodig om het nieuwe te begrijpen. Ook hier stelt de prof opnieuw gerichte vragen om het antwoord van de leerlingen te krijgen.\newline Ik zie dit als een snelle manier om te polsen of je publiek, of toch een deel ervan, de lesdoelen bereikt heeft. Ik zou echter graag nog een breder gamma aan snelle evaluatietools in mijn bezit krijgen. Tijdens de les merkte ik ook wel op dat het steeds dezelfde handen waren die antwoordden op de vragen van de prof. Dit zou je kunnen vermijden door iemand aan te duiden.  \\
+			& 2 & Hoe reageert de prof bij het krijgen van een goed antwoord? En hoe bij het krijgen van een fout antwoord? & Wanneer de prof een vraag stelt aan de studenten, al dan niet evaluerend, becommentarieert hij steeds het gegeven antwoord. Indien het correct is, dan geeft hij ofwel positieve feedback, ofwel vraagt hij door, om te zien of de student, of andere studenten, ook de diepere begrippen vatten en kunnen uitleggen. Indien de student fout antwoordt, dan vraagt de prof verder. Hij doet dit meestal door de vragen te herformuleren of de vraag in deelvragen op te delen. Ook wanneer de prof geen antwoord krijgt, deelt hij vaak de vraag in kleinere deelvragen op.  \\
+		\end{tabularx}
+		
+		
+		\begin{tabularx}{1.56\textwidth}{|Q{0.25\textwidth}|Q{0.1\textwidth}|Q{0.25\textwidth}|Q{0.85\textwidth}|}
+			& 2 & & Het opsplitsen van vragen in kleinere deelvragen vind ik een positief gegeven wanneer er geen antwoord komt. De leerlingen denken op die manier nog steeds na over het probleem en ook de leerlingen die nog niet zoveel begrijpen kunnen  bij complexere problemen beter volgen door de kleinere stappen. De prof benadert de studenten positief, zowel bij correcte als foutieve antwoorden. Hij vraagt even door bij de persoon die foutief antwoordde, maar trekt die vragen ook open naar alle studenten. Op die manier voelt de persoon die foutief geantwoord heeft zich niet geviseerd, wat ik als positief ervoer. \\\hline
+		\end{tabularx}
+		
+		\vspace{2cm}
+		
+		\begin{tabularx}{1.56\textwidth}{|Q{0.25\textwidth}|Q{0.1\textwidth}|Q{0.25\textwidth}|Q{0.85\textwidth}|}\hline
+			Observatieles 2 \newline \underline{Datum:} 20/11/2019\newline \underline{Klas:} 2e bachelor Handelsingenieurs \newline \underline{Lesonderwerp:}  Elektrische stroom, weerstanden in serie en parallel, wetten van Kirchhoff& 1 & Hoe kan de prof niet eenvoudige fysische begrippen toch conceptueel uitleggen, zonder dat de studenten de harde fysica zien? & Bij het volledige elektromagnetisme gedeelte van deze cursus is het moeilijk om de inhoud conceptueel, met zo weinig mogelijk vergelijkingen, te benaderen. Toch slaagt de prof hier grotendeels in. De harde afleidingen blijven achterwege, terwijl er wel nog een voldoende samenspel is tussen uitleg en vergelijkingen. Zo worden de afleidingen van nieuwe vergelijkingen (bijvoorbeeld van de stroomdichtheid tijdens deze les) wel nog gedaan. De uitwerking staat echter al volledig op de slide en de prof begeleidt de studenten door middel van het stellen van vragen (Wat is stroom weer juist? Hoe tellen we de totale lading in een volume? ...). Op die manier is het mogelijk dat de studenten bepaalde afleidingen wel zien en conceptueel kunnen vatten wat er juist gebeurt, door middel van een sterke begeleiding. Naast afleidingen, gebruikt de prof vaak ook analogieën. Wanneer het over de wet van Ohm gaat en de eigenschappen van de stroom (ladingen) in een draad bespreekt, legt hij vaak de analogie met mensen die door een deur moeten. \newline Omdat fysica in het middelbaar nog minder afleidingen heeft en vaak ook conceptueel uitgelegd wordt, vind ik het belangrijk om correcte analogieën te hanteren bij mijn lessen in het middelbaar. De fysische afleidingen zou ik ook eens proberen samen met de leerlingen op te bouwen, zonder dat de volledige afleiding al te zien is. Door middel van die vraagstelling zie ik wel mogelijk dat de leerlingen een veel beter begrip zullen hebben van de afleiding zelf, dan wanneer je als leerkracht gewoon vergelijkingen in elkaar invult. \\
+			
+		\end{tabularx}
+		
+		\begin{tabularx}{1.56\textwidth}{|Q{0.25\textwidth}|Q{0.1\textwidth}|Q{0.25\textwidth}|Q{0.85\textwidth}|}	& 2 & Durven de studenten vragen te stellen? Hoe zorgt de prof ervoor dat de studenten dit durven te doen? & Tijdens de observatie van beide lessen viel het mij op dat er meerdere studenten waren die vragen aan de prof durfden te stellen. Dit gebeurde zowel nadat de prof hen uitdrukkelijk gevraagd had of ze nog met vragen zitten na een moeilijker stuk gezien hebben als op zelfstandige basis. Ondanks de grotere groep van 60 studenten heeft het merendeel geen probleem om bij dit vak vragen te stellen. Ik kan hieruit besluiten dat er een positieve klassfeer heerst tijdens deze lessen. Dit komt vooral denk ik omdat er respect uit beide kampen komt. Als leerkracht wil ik ook werken aan een positief klasklimaat waarin de studenten durven te leren. \\\hline	
+		\end{tabularx}
+	\end{landscape}
+	
+	\include{LesvoorbereidingLes1}
+	\include{LesvoorbereidingLes2}
+	\include{LesvoorbereidingLes3}
+	\include{LesvoorbereidingLes4}
+	
+	
+	
+	
+	
+	
+	
+	\section{Bespreking meso-activiteiten}
+	Stel per meso-activiteit een verslag op op basis van volgende criteria:
+	\begin{itemize}
+		\item Korte situering van de drie activiteiten.
+		\item Omschrijving van twee aspecten die je voor jezelf geleerd hebt uit de deelname aan de activiteiten
+		\item  Toon aan met twee voorbeelden dat de activiteiten een meerwaarde zijn voor de leerkrachten.
+		\item Toon aan met twee voorbeelden dat de activiteiten een meerwaarde vormen voor de leerlingen.
+		\item Bespreek hoe het komt dat bepaalde activiteiten geen echte meerwaarde hebben voor leerlingen en op welke manier deze aangepast kunnen worden om toch nog functioneel te zijn voor het leerproces van de leerlingen.
+	\end{itemize}
+	
+	\subsection{Omschrijving van de activiteiten}
+	\subsubsection{Meso-activiteit 1: kinderuniversiteit Kulak}  Op zaterdag 26 oktober ging aan de katholieke universiteit campus kulak kortrijk de kinderuniversiteit door. Tijdens deze dag kunnen jongeren tussen 8 en 13 jaar ofwel de voormiddag, namiddag of hele dag op de universiteit doorbrengen. Per sessie wordt er zowel een lezing (45min) als een workshop (1u30min) aangereikt; de lezing wordt door iedereen gevolgd, waarna de jongeren zich verspreiden om per 20 à 25 een workshop te volgen.\newline
+	
+	
+	De 15e editie van de kinderuniversiteit stond in het teken van `reis door de tijd'. De werknemers van de Kulak voorzagen tien verschillende workshops. Enkele personen binnen de fysica, waartoe ik behoor, bedachten een workshop genaamd `Bouw nu een telescoop en kijk straks naar het Universum van vroeger!'. Hiermee willen we de leerlingen bekend maken met de werking van lenzen, dat je de kleuren van de regenboog uit wit licht kan halen en dat je in het verleden kijkt wanneer je met een telescoop naar de sterren kijkt. De leerlingen krijgen tijdens de workshop eerst een halfuur uitleg van de professor door middel van een presentatie met slides en demonstratiemateriaal. Tijdens deze presentatie begint de professor met uit te leggen hoe licht werkt. Hij toont breking van licht met behulp van een laserstraal, een glazen halve cirkel (om het licht te breken) en wat krijtstof. Om reflectie duidelijk te maken, wordt er een spiegel aan de leerlingen doorgegeven. Daarna legt de prof uit hoe zowel holle als bolle lenzen werken, hoe ze ervoor zorgen dat dingen vergroot en verkleind worden en hoe je lenzen kan gebruiken om naar de ruimte te kijken. Daarna legt de professor nog uit dat het licht wel heel snel gaat, maar niet oneindig snel. Hierdoor zie je sterren zoals ze in het verleden waren. \newline\newline
+	
+	Na deze uitleg gaan de leerlingen aan de slag met het maken van een minitelescoop. Hiervoor gebruiken ze:
+	\begin{itemize}
+		\item 2 PVC-buizen met een verschillende diameter die in elkaar schuiven
+		\item Twee verschillende lenzen
+		\item 3D-geprinte lenshouders
+		\item Plakband en versiering.
+	\end{itemize}
+	\begin{figure}[!h]
+		\centering
+		\includegraphics[width=0.9\textwidth]{Telescoop}
+		\caption{Het materiaal waarmee de telescoop gemaakt wordt.}
+		\label{Fig::Telescoop}
+	\end{figure}
+	Tijdens het maken van hun telescoop werden de leerlingen per drie meegenomen om zelf de eigenschappen van lenzen te ondervinden. Er werd een figuur op doorschijnende folie afgedrukt die een hond voorstelt en wanneer je de figuur ondersteboven houdt een kat toont. De figuur staat hieronder in beide opzichten.
+	
+	\begin{figure}[!b]
+		\centering
+		\includegraphics[width=0.5\textwidth]{HondKat}
+		\caption{De figuur die gebruikt werd om de  leerlingen de eigenschappen van bolle lenzen te laten ondervinden.}
+		\label{Fig::HondKat}
+	\end{figure}
+	Door middel van een opstelling met bolle lenzen is het mogelijk om beide figuren zichtbaar te maken, aangezien bolle lenzen het beeld kunnen omdraaien. De opstelling werd aan de leerlingen voorgesteld en iedere component werd benoemd. Door aan de  leerlingen de vraag te stellen hoe het mogelijk is dat beide beelden uit het ene beeld voortkomen wisten er sommigen de eigenschappen van bolle lenzen, die ze net gehoord hadden, te gebruiken om dit te verklaren. 
+	
+	Wanneer alle jongeren hun telescoop gemaakt hebben, kunnen ze op zoek gaan naar hun naam die op een ster geschreven staat. Die sterren hangen een eindje verder, waardoor hun namen niet zichtbaar zijn met het blote oog, maar wel met de gemaakte telescoop. 
+	
+	\subsection{Twee aspecten die ik voor mezelf geleerd heb}
+	
+	\subsection{Twee voorbeelden die aantonen dat de activiteiten een meerwaarde zijn voor leerkrachten}
+	\begin{itemize}[labelwidth=3em,leftmargin =\dimexpr\labelwidth+\labelsep\relax]
+		\item[Meso 1] Ondanks dat de werking van lenzen geen makkelijke materie is, was ik verbaasd van de interpretatie van sommige jongeren bij de proef met de hond-kat. In eerste instantie vonden ze het heel vreemd wat er aan de hand was: ze zagen twee verschillende beelden, maar die kwamen allebei van dezelfde foto. Door als leerkracht hier gerichte vragen te stellen, kun je de leerlingen zelfontdekkend laten leren. Het zijn zijzelf die de link leggen tussen de eigenschappen van lenzen: bolle lenzen draaien je beeld om en maken het reëel, terwijl holle lenzen de oriëntatie van het beeld behouden, maar dat het beeld virtueel wordt. Hierdoor wordt mijn beeld van zelfontdekkend leren  binnen het juiste tijdskader versterkt.
+	\end{itemize}
+	
+	\subsection{Twee voorbeelden die aantonen dat de activiteiten een meerwaarde zijn voor leerlingen}
+	
+	
+	\subsection{Voorbeelden die geen echte meerwaarde hebben voor de  leerlingen en op welke manier deze aangepast kunnen worden om toch nog functioneel te zijn voor het leerproces van de leerlingen}
+	
+	
+	
+	
+	
+	
+	\section{Evaluatiedocumenten vakmentor}
+	
+	\section{Evaluatiedocument klasbezoek stagebegeleider}
+	
+	\section{Eindreflectie}
+	Stel een eindreflectie op waarin je volgende aspecten behandelt: 
+	
+	1) Waren er factoren die bevorderend of belemmerend werkten m.b.t. het goed doorlopen van je stage? 
+	2) Waarvoor had je graag bijkomende begeleiding gekregen van je vakmentoren? 
+	3) Waarvoor had je graag bijkomende begeleiding gekregen van je stagebegeleider? 
+	4) Bekijk aandachtig de acties die je in het begin van je stage opstelde in jouw POP . Ga na of je via de acties jouw leerdoelen hebt behaald. Verwijs heel duidelijk naar informatie in je portfolio waar en hoe je deze acties aan bod liet komen. 
+	5)  Bestudeer nogmaals het opleidingsprofiel en de basiscompetenties van een leraar (link):  bespreek minstens 5 basiscompetenties die je succesvol hebt behaald tijdens het uitvoeren van je stage. 
+	Jouw eindreflectie is maximaal drie A4-pagina’s lang. 
+	
+	
+	
+	\section{Voorbereiding eindassessment}
+	
+	Om het eindassessment voor te bereiden, kan je gebruik maken van volgende vragen:
+	• Lees jouw eindreflectie goed na en bekijk jouw leerdoelen en uitgewerkte acties. Recapituleer hoe je de stage hebt ervaren. Waarom moet een directeur jou als leerkracht aanwerven? Wat heb jij een schoolteam te bieden? Waar zie je nog uitdagingen voor jezelf? 
+	• Waar heb je nog aanvangsbegeleiding nodig en wie kan jou daarbij helpen (toon je inzicht in vakgroep- en schoolwerking aan)?
+	• Hoe heb je de lerarenopleiding in het algemeen ervaren? Wat vond je positief? Wat heb je gemist tijdens de opleiding? 
+	
+	
+	
+	
+	
+	
+\end{document}
