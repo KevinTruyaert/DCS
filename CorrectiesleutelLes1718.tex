@@ -12,7 +12,8 @@
 \fancyhead[LE,RO]{}%'E': even page, 'O': odd page
 \fancyhead[RE,LO]{Correctiesleutels bij oefeningen op flux, inductiespanning en inductiestroom}
 \fancyfoot[C]{K. Truyaert}
-\fancyfoot[LE,RO]{5TW Toegepaste fysica       \thepage}
+\fancyfoot[LE,RO]{5TW Toegepaste fysica}
+\fancyfoot[LO,RE]{\thepage}
 %\renewcommand{\labelitemi}{$\circ$}
  
 \definecolor{CVO}{RGB}{232, 0, 97}
@@ -56,7 +57,7 @@ In deze vraag beweeg je een rechte geleider loodrecht op een magnetisch veld. De
 De grootte van het magnetisch veld kan je via het inductieverschijnsel in een rechte, bewegende geleider vinden. Hiervoor gebruik je de vergelijking:\[\left|U_i\right|= NBlv.\]
 Deze vergelijking omvormen naar $B$ levert de volgende vergelijking op:
 \[B = \frac{\left|U_i\right|}{Nlv}.\]
-Invullen van alle gekende factoren (N=1), levert een magnetische veldsterkte vn 3,00~T op.
+Invullen van alle gekende factoren (N=1), levert een magnetische veldsterkte van 3,00~T op.
 
 
 \newpage
@@ -132,11 +133,72 @@ Nu het blokje volledig in het magnetisch veld hangt, blijft de flux tussen $t=4~
 	\end{tikzpicture}
 \end{figure}
 We weten dus dat enerzijds $l = 2~s\cdot v$ en anderzijds dat $2,40~m=l+6~s\cdot v$. Na substitutie vind je dat $v = 0,3~m/s$ en dat $l=0,60~m$.
+\newpage
+
+
+\underline{Oefening 9}
+Een cirkelvormige spoel bevat 20 windingen van 25,0~cm diameter en staat loodrecht op een homogeen magnetisch veld met grootte 0,0800~T. De spoel wordt in 5,00~ms een kwartslag om zijn middellijn gedraaid.
+
+
+\underline{Gegeven:}\newline
+N = 20\newline
+d = 0,250~m $\rightarrow$ r = 0,125~m\\
+B = 0,0800~T\\
+$\Delta t$ = 5,00~ms = 0,00500~s
+
+\underline{Gevraagd:}
+$U_i$ \\
+\underline{Oplossing:}\\
+Je weet via de algemene inductiewet dat de grootte van de inductiespanning als volgt bepaald wordt:
+\(\left|U_i\right|=N\frac{\Delta\Phi}{\Delta t}.\)
+Hiervan is reeds alles gekend, behalve het verschil in flux. Aangezien de spoel een kwartslag draait, wijzigt de flux hier via een wijziging in de hoek $\alpha$.\newline
+$\Phi_1 = BA\cos(0)=0,0800~T\cdot\pi 0,125^2~m^2\cdot 1= 0,00393~Wb$\newline
+$\Phi_2 = BA\cos(90) = 0~Wb$\\
+$\Rightarrow \Delta\Phi = -0,00393~Wb$
+De grootte van de inductiespanning wordt dus:
+\(\left|U_i\right|=N\frac{\Delta\Phi}{\Delta t}=20\cdot\frac{0,00393~Wb}{0,00500~s}=15,7~V.\)
+
+De gemiddelde inductiespanning die doorheen de spoel vloeit is 15,7 Volt. 
+
+
+\newpage
 
 
 
+\underline{Oefening 11}\\
+In een rechthoekig draadraam van 50,0 bij 10,0 cm is een lampje met een weerstand van 20,0 $\Omega$ opgenomen. Het draadraam wordt met een constante snelheid van 0,300 m/s in een homogeen magneetveld met een veldsterkte van 0,220 T geduwd.
+\begin{figure}[!h]
+	\centering
+	\scalebox{0.25}{\begin{tikzpicture}
+	\node[white] (c00) {$\cdot$};
+	\foreach \x [remember=\x as \lastx (initially 0)] in {0,...,20}{
+		\node[right =of c\lastx0,shape=circle,fill=black] (c\x0) {$\cdot$};
+		\foreach \y [remember=\y as \lasty (initially 0)] in {1,...,4}{
+			\node[below =of c\x\lasty,shape=circle,fill=black] (c\x\y) {$\cdot$};
+		}
+	}
+	\draw(30,-5.5) rectangle (50,-0.5);	
+	\draw[fill=white,line width=1.5pt] (50,-3) circle (1cm) node{\Huge X};
+	\end{tikzpicture}}
+\end{figure}
+\begin{enumerate}
+	\item[a)] Bereken hoeveel de flux door het draadraam per seconde toeneemt. 
+	\item[b)] Bereken de inductiespanning die hierdoor in het draadraam wordt opgewekt. 
+	\item[c)] Bereken de stroomsterkte in het draadraam en geef in de afbeelding aan in welke zin deze stroom loopt. 
+	\item[d)] Bereken de grootte en richting van de Lorentzkracht die op het draadraam werkt. 
+	\item[e)] Laat met een berekening zien dat het bij het duwen geleverde vermogen gelijk is aan het door het lampje verbruikte vermogen.
+\end{enumerate}
 
-
+\underline{Oplossing:}\\
+\begin{enumerate}
+	\item[a)] Een rechte bewegende geleider beweegt in een magnetisch veld. Hierdoor kunnen we zeggen dat de fluxverandering bepaald zal worden via: $\Delta\Phi = B~l~\Delta x$. De snelheid van het raam is gekend, dus er is geweten hoeveel afstand er per seconde afgelegd wordt. Hier is de fluxverandering: $\Delta\Phi = 0,220~T\cdot0,100~m\cdot0,300~m=0,00660~Wb$.
+	\item[b)] Een rechte bewegende geleider beweegt in een magnetisch veld. Hierdoor kunnen we zeggen dat de inductiespanning bepaald zal worden via: $\Delta\Phi = B~l~v$. De snelheid van het raam is gekend, dus er is geweten hoeveel afstand er per seconde afgelegd wordt. Hier is de inductiespanning: $\Delta\Phi = 0,220~T\cdot0,100~m\cdot0,300~m/s=0,00660~V$
+	\item[c)] In een gesloten kring wordt ook een stroom geïnduceerd wanneer een inductiespanning ontstaat. In deze kring is er een weerstand van 20,0~$\Omega$. Via de wet van Ohm vind je dus dat er een inductiestroom van $0,000330~A$, ofwel 330~$\mu$A in de kring vloeit. De stroom vloeit zo zodat het geïnduceerde magnetisch veld de fluxverandering tegenwerkt. Hier ontstaat er een fluxstijging, dus het geïnduceerde magnetisch veld zal tegengesteld zijn aan dat dat aangelegd is. Hierdoor vloeit de stroom in wijzerin op de figuur. 
+	\item[d)] De Lorentzkracht op het raam werkt op het linkerstuk draad. Het magnetisch veld komt uit het blad, de stroom loopt verticaal op je blad naar boven. Via de linkerhandregel vind je dat de Lorentzkracht naar rechts georiënteerd is. De vergelijking voor de Lorentzkracht is F=BIL, wat in dit geval dus $7,26~\mu$N is.
+	\item[e)] \underline{Vermogen van het duwen:}\newline
+				P$_\text{duwen}$ = F$\cdot$v = 7,26~N$\cdot$0,300~m/s=2,18~$\mu$W\newline \underline{Vermogen van het lampje:}\newline
+				P$_\text{lampje}$ = $U_i\cdot I_i$ = 0,00660~V$\cdot$0,00330~A=2,18~$\mu$W
+\end{enumerate}
 
 
 
