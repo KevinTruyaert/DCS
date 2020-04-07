@@ -3,7 +3,8 @@
 \usepackage[dutch]{babel}
 \usepackage{fancyhdr, amsmath, color, graphicx, enumitem, tabularx, hyperref, longtable, multirow, placeins, apacite, subcaption,marvosym,multicol}
 \usepackage[framemethod=tikz]{mdframed}
-
+\usepackage{hyphenat}
+\hyphenation{achter-grond weten-schaps-vakken stage-be-ge-lei-ding oor-spronke-lijk door-lopen stage-be-ge-leid-ster oefen-zittingen ver-antwoordelijke sem-es-ter}
 \usepackage[europeanresistors,americaninductors,americancurrents,siunitx]{circuitikz}
 
 \usepackage[margin=2.5cm,headheight=68pt]{geometry}
@@ -24,44 +25,6 @@
 \date{}
 
 
-% %FOOTER IN MDFRAMED
-\usepackage{footnote} 
-\newenvironment{mdframedwithfoot}
-{   
-	\savenotes
-	\begin{mdframed}
-		\stepcounter{footnote}
-		\renewcommand{\thefootnote}{\arabic{footnote}}
-	}
-	{
-	\end{mdframed}
-	\spewnotes
-}
-
-
-%FOOTER IN PARBOX
-\makeatletter
-\newcommand{\global@insert}[2]% #1=box number, #2=vertical list
-{\bgroup
-	\setbox\@tempboxa=\box#1
-	\global\setbox#1=\vbox{\unvbox\@tempboxa #2}
-	\egroup}
-
-\long\def\@footnotetext#1{\global@insert\footins{%
-		\reset@font\footnotesize
-		\interlinepenalty\interfootnotelinepenalty
-		\splittopskip\footnotesep
-		\splitmaxdepth \dp\strutbox \floatingpenalty \@MM
-		\hsize\columnwidth \@parboxrestore
-		\protected@edef\@currentlabel{%
-			\csname p@footnote\endcsname\@thefnmark
-		}%
-		\color@begingroup
-		\@makefntext{%
-			\rule\z@\footnotesep\ignorespaces#1\@finalstrut\strutbox}%
-		\color@endgroup}}%
-\makeatother
-%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %Strikeout and highlight text
 \usepackage{soul}
@@ -353,7 +316,7 @@
 	
 	
 	
-	\includepdf[scale = 0.8,pagecommand=\section{Evaluatiedocument klasbezoek stagebegeleider}]{27112019_Feedback}
+	\includepdf[scale = 0.9,pagecommand=\section{Evaluatiedocument klasbezoek stagebegeleider}]{27112019_Feedback}
 	\includepdf[scale = 0.8,pagecommand=,pages=2-]{27112019_Feedback}
 	
 	
@@ -371,7 +334,8 @@ Jouw eindreflectie is maximaal drie A4-pagina’s lang.\newline\newline
 	
 Mijn stage in het VISO heeft vanwege de overmacht rond de pandemie spijtig geen slot gekregen. Het was de bedoeling dat ik nog drie lessen ging geven: een introductie rond het onderwerp van de transformator en het geven van een labo rond dit onderwerp. Om een vlotte beëindiging van mijn stage te verzorgen, hebben mijn vakmentor en ik via mail nog zaken geregeld. Ik heb het deel van de cursus dat bij mij lag ingescand zodat de leerlingen dit onderdeel nog konden krijgen van haar. Verder heb ik geen speciale factoren binnen mijn stage ervaren, die ofwel speciaal bevorderend ofwel belemmerend werkten.\newline
 
-Ik heb positieve ervaringen met zowel mijn twee vakmentoren als met mijn stagebegeleidster. Ze hebben mij steeds met terechte feedback te rade gestaan, waaruit ik altijd heb kunnen putten om het in mijn volgende les toch net dat tikkeltje anders te doen dan ik oorspronkelijk van plan was. Op die manier heb ik de leerlingen beter in mijn lessen kunnen betrekken, beter kunnen begeleiden, ondersteunen \ldots{} Binnen mijn LIO-context werd ik eerder vrij gelaten. Dit zijn lessen die ik al gedurende vier jaar verzorg aan de universiteit. Net zoals de voorbije drie jaar, heb ik ook dit jaar geprobeerd om mijn lessen te innoveren, met als doel dat de studenten een beter begrip rond fysica hebben. Ik heb ervaren dat oefenzittingen niet op de `klassieke' (lees: meest veronderstelde) manier hoeven te gebeuren. Studenten verwachtten dit enigszins wel dat je aan de universiteit eerder een docerende vorm aanneemt als lesgever. Wanneer ze echter in een vroeg stadium met een andere manier van lesgeven geconfronteerd werden, zette het merendeel van de groep zich snel in om actief mee te werken aan het lesgebeuren. Ik heb ze zowel in groep laten werken als met verbeterfiches, per twee, om te zorgen dat studenten vooral elkaar met de leerstof konden helpen. De studenten leren op die manier van elkaar en van hun eigen uitleg. De vakmentor liet mij op het einde van de lessenreeks weten dat de studenten het vak opnieuw positief geëvalueerd hebben en dat zij zeer positief staan ten opzichte van hun lesgevers, zowel op gebied van vakkennis als van het lesgebeuren (POP lesdoel 3). \newline\newline
+Ik heb positieve ervaringen met zowel mijn twee vakmentoren als met mijn stagebegeleidster. Ze hebben mij steeds met terechte feedback te rade gestaan, waaruit ik altijd heb kunnen putten om het in mijn volgende les toch net dat tikkeltje anders te doen dan ik oorspronkelijk van plan was. Op die manier heb ik de leerlingen beter in mijn lessen kunnen betrekken, beter kunnen begeleiden, ondersteunen \ldots{}  Tijdens deze stage heb ik ook een lessenreeks van acht (oorspronkelijk elf) lessen mogen geven. Dit benadert beter de realiteit dan losse lessen. Door een lessenreeks te mogen geven, toont de vakmentor ook het vertrouwen in mij als stagiair. Zij heeft ook aangegeven dat ze tevreden is over de lessenreeks die ik voor haar leerlingen voorzien heb.\newline
+Binnen mijn LIO-context werd ik eerder vrij gelaten. Dit zijn lessen die ik al gedurende vier jaar verzorg aan de universiteit. Net zoals de voorbije drie jaar, heb ik ook dit jaar geprobeerd om mijn lessen te innoveren, met als doel dat de studenten een beter begrip rond fysica hebben. Ik heb ervaren dat oefenzittingen niet op de `klassieke' (lees: meest veronderstelde) manier hoeven te gebeuren. Studenten verwachtten dit enigszins wel dat je aan de universiteit eerder een docerende vorm aanneemt als lesgever. Wanneer ze echter in een vroeg stadium met een andere manier van lesgeven geconfronteerd werden, zette het merendeel van de groep zich snel in om actief mee te werken aan het lesgebeuren. Ik heb ze zowel in groep laten werken als met verbeterfiches, per twee, om te zorgen dat studenten vooral elkaar met de leerstof konden helpen. De studenten leren op die manier van elkaar en van hun eigen uitleg. De vakmentor liet mij op het einde van de lessenreeks weten dat de studenten het vak opnieuw positief geëvalueerd hebben en dat zij zeer positief staan ten opzichte van hun lesgevers, zowel op gebied van vakkennis als van het lesgebeuren (POP lesdoel 3). \newline\newline
 Mijn stage in het middelbaar vond plaats in de VISO, Roeselare, waar ik toegepaste fysica aan het vijfde jaar Techniek-Wetenschappen mocht geven. Dit is mijn eerste ervaring met het technisch onderwijs geweest en eveneens ook mijn eerste ervaring met het geven meerdere lessen op verschillende dagen aan een klas in het middelbaar onderwijs. Hier heb ik vooral positieve ervaringen gehad, dankzij ondersteuning van de vakmentor. Haar feedback zorgde ervoor dat ik mijn volgende les telkens beter uitvoerde. Tegelijkertijd was ik ook in staat om te sleutelen aan elementen binnen mijn POP, door deze feedback. Ik heb tijdens deze stage mijn `voelsprieten' (POP lesdoel 1) beter ontwikkeld. Ik stelde de leerlingen vragen en betrok alle leerlingen bij mijn les, ook diegene die niet hun hand opstaken (zie feedback vakmentor VISO, bvb les 19-20). Dit lukte natuurlijk ook uitstekend vanwege de grootte van deze klas, aangezien er slechts acht leerlingen in de groep zitten. Ik heb ook wat verschillende werkvormen in verschillende lessen proberen te gebruiken, zoals een labo in les 13-14 (en wat eigenlijk les 22-23 had moeten zijn), maakten de leerlingen oefeningen in groep en verbeterden we die meestal klassikaal, maar ook via verbetersleutels (les 18). Wanneer er theorie besproken werd, dan kwam ik heel vaak terecht bij een onderwijsleergesprek. De leerkracht merkte wel op dat de stukken die ik gegeven heb, tot het moeilijkere deel van alle leerstof behoort en dat het moeilijk is om dit anders aan te pakken. Toch zou ik in mijn toekomst willen verder zoeken om ook deze moeilijke stukken vlot en actief aan te brengen.\newline In mijn beide stagesettings heb ik ook steeds de relevantie van de aangeleerde fysische begrippen te duiden binnen de context van onze leefwereld. De theorie was steeds heel algemeen, heel wiskundig besproken. Toch heb ik steeds de theorie gelinkt met situaties in de alledaagse wereld waarin die theorie aan bod komt (lesdoel 2). Dit ging dan van een dynamo tot een windmolen over een `kooi van Faraday' (waarbij ik de opmerking maakte dat dit een perfect klaslokaal zou zijn, aangezien er dan geen bereik van hun GSM zou zijn).  \newline
 Op het zorgniveau van deze acht leerlingen, was er één persoon met verhoogde zorg (fase 1), vanwege anderstaligheid, en één leerling met uitbreiding van zorg (fase 2), vooral vanwege een Autisme spectrum stoornis. Ik vond het een ideale moment om een eerste maal in praktijk in aanraking te komen met de verschillende facetten van het zorgspectrum binnen het lesgebeuren. Ik heb hier niet bewust naar oplossingen / alternatieven /... gezocht, maar de vakmentor vond dat ik uitstekend reageerde tijdens bepaalde situaties, terwijl ik sommige situaties vaak als niet-problematisch inschatte. Ik heb tijdens deze lessen toch wel een grondige basis praktijkervaring opgedaan wanneer het op een leerling met ASS aankomt. Dit heb ik als een meerwaarde van mijn stage ervaren. \newline
 \newline
@@ -404,9 +368,12 @@ Om het eindassessment voor te bereiden, kan je gebruik maken van volgende vragen
 
 Zoals hierboven reeds besproken, heb ik mijn stage als positief ervaren. Tijdens mijn stage heb ik ervaren dat ik liever aan een tso richting zou lesgeven dan aan een aso richting. Binnen een tso richting heb ik weerwoord van mijn leerlingen, durven ze zelf vragen te stellen, staan ze open om zelf aan de slag te gaan. Tijdens mijn vorige stage in het aso heb ik dit niet kunnen ervaren.\newline\newline
 Dit vind ik meteen één van mijn pluspunten: ik wil echt lesgeven om de leerlingen iets bij te leren; ze de wereld rondom hen beter te laten begrijpen; ze kritisch te laten nadenken, niet enkel over wetenschappen, maar over alle onderwerpen. Als leerkracht wil ik dat bijbrengen aan mijn toekomstige leerlingen. \newline
-Als lid van het vakteam, wil ik mijn inbreng doen om te helpen bij het ontwikkelen van nieuwe wetenschapsprojecten en -initiatieven. Als sterrenkundige zou ik hierover thema's kunnen maken die iedereen aanspreken. Als lid van het schoolteam, zou ik een meerwaarde zijn bij de begeleiding van de GIP's van de leerlingen. Ik begeleid al vier jaar verschillende projectwerken van ingenieursstudenten die één of twee jaar ouder zijn dan de laatstejaarsleerlingen in het secundair. Die ervaring zou een meerwaarde zijn in mijn rol als lid van het GIPteam.
-
-
+Als lid van het vakteam, wil ik mijn inbreng doen om te helpen bij het ontwikkelen van nieuwe wetenschapsprojecten en -initiatieven. Als sterrenkundige zou ik hierover thema's kunnen maken die iedereen aanspreken. Als lid van het schoolteam, zou ik een meerwaarde zijn bij de begeleiding van de GIP's van de leerlingen. Ik begeleid al vier jaar verschillende projectwerken van ingenieursstudenten die één of twee jaar ouder zijn dan de laatstejaarsleerlingen in het secundair. Studenten begeleiden bij een technische probleemstelling vind ik aangename uitdagingen. Een steeds variërende en evoluerende uitdaging die ik met veel plezier aanga! Die ervaring zou een meerwaarde zijn in mijn rol als fysica leerkracht binnen het GIPteam in een technische school bij de meer theoretische opleidingen als bijvoorbeeld industriële wetenschappen, elektromechanica, elektriciteit-elektronica, techniek-wetenschappen en vliegtuigtechnieken. Tegelijkertijd zal ik van deze projecten veel technische inzichten verwerven, die ik van de leerlingen zelf en collega's binnen het GIPteam aangereikt zal krijgen, iets wat ik als een meerwaarde beschouw.\newline\newline
+De mentor van de aanvangsbegeleiding zal mij en mijn mede startende collega's hulp op school niveau aanbieden. We zullen enerzijds kennismaken met de werking van de school op vlak van regelgeving en manier van lesgeven. Anderzijds zullen we hier ook de boodschap die de school wil dragen uitvoerig kunnen bespreken. Binnen de werking van de  aanvangsbegeleiding kunnen we ook elkaars lessen bezoeken om hieruit leren hoe we op klasniveau met bepaalde groepen kunnen omgaan. Naast de aanvangsbegeleiding is het steeds aangenaam om een `senior' vakleerkracht als begeleider te hebben, die je kan bijstaan om manieren te bespreken om bepaalde vakinhouden te geven. Die persoon kan je ook introduceren in het aanwezige materiaal voor labo's en welke materialen in de nabije toekomst nuttig zouden zijn.\newline\newline
+Ik heb anderhalf jaar in het CVO de opleiding gevolgd. Daar vond ik het een meerwaarde dat je microteaching moest doen aan medecursisten die allemaal een verschillende achtergrond hebben. Dat vond ik een heel sterk pluspunt, omdat dit de realiteit beter benadert. Als leerkracht geef je les over inhoud die nog ongekend is voor je leerlingen. Door microteaching te doen aan een diverse groep boots je deze situatie na. Voor wetenschapsvakken kom je dan net vaak zelfs in situaties terecht waar je medecursisten eigenlijk zelfs de basis niet (meer) kennen en waar je als leerkracht getriggerd wordt om echt de basis kort en bondig nog eens aan te brengen. Als leerkracht zal je in de toekomst ook in contact komen met leerlingen die na een vakantie terug naar de les komen en alles vergeten zijn. \newline
+De praktijkervaring die je opdoet tijdens je stages is zeker de beste leerschool. Ik vond het aangenaam dat ik mijn stages over verschillende niveaus heb kunnen ervaren. Zo heb ik mijn stage bij DCO in het aso mogen geven en heb ik mijn stagelessen bij DCS op de universiteit (LIO) en in het tso mogen geven. Die ervaring heeft mij ook ervan overtuigd dat ik liever in het tso dan het aso les wil geven. De leerlingen waarmee ik in contact ben mogen komen, zijn actiever in het lesgebeuren dan de aso leerlingen waarmee ik in contact gekomen ben. Dit heb ik ook ervaren bij de fysica experimentendagen die we voor laatstejaars aan Kulak voorzien. De aso leerlingen wiskunde-wetenschappen die dit volgden waren niet actief tijdens de sessie. Ook de technisch-wetenschappelijke eindwerken die in de tso richtingen door de leerlingen gerealiseerd worden spreken mij zeer sterk aan. \newline
+Wat ik gemist heb tijdens mijn opleiding is wat vakdidactische ondersteuning. De ideale situatie zou er één zijn waarin de situatie van de vroegere CVO-opleiding gecombineerd is met vakdidactische ondersteuning. \newline 
+In beide systemen, CVO en Kulak, heb ik enkel positieve ervaringen met mijn stagebegeleiding. Zij hebben mij steeds bijgestaan met terechte, constructieve feedback die ik in mijn volgende stagelessen meteen kon uitproberen.
 
 
 
